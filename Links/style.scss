@@ -39,16 +39,41 @@
         .nav-menu {
             float: right;
 
-            ul {
+            .nav-inner {
                 display: flex;
                 flex-direction: row;
                 padding: 2px 7px 0 0;
                 justify-content: space-between;
 
-                li {
+                .drop {
                     list-style: none;
+                    color: #fff;
 
-                    a {
+                    .inner-nav-menu {
+                        position: absolute;
+                        background: transparent;
+
+                        .list-item {
+                            background: transparent;
+                            padding: 0px 0px;
+
+                            .l-txt {
+                                text-decoration: none;
+                                padding: 10px 21px 10px 21px;
+                                letter-spacing: .5px;
+                                font-size: 13.5px;
+                                color: #fff;
+                                font-weight: 500;
+                                background-color: transparent;
+                            }
+
+                            .l-txt:hover {
+                                color: #000 !important;
+                            }
+                        }
+                    }
+
+                    .i-txt {
                         display: flex;
                         align-items: center;
                         text-decoration: none;
@@ -268,12 +293,23 @@
         .s-icons {
             margin-bottom: 20px;
 
+            .social-icons 
+            {
+                width: 35px;
+                height: 35px;
+                display: inline-flex;
+                margin: 0 5px;
+                text-decoration: none;
+            }
+
             .fa-brands {
+                font-size: 15px;
+                border-radius: 50%;
+                padding: 10px 0px 0px 0px;
+                width: 35px;
+                height: 35px;
                 color: #666666;
                 background-color: #F2F2F2;
-                padding: 10px 10px;
-                margin: 0px 5px;
-                border-radius: 50%;
             }
         }
 
@@ -287,10 +323,7 @@
 
 
 
-
-
-
-@media (max-width:781px) {
+@media (max-width:856px) {
     .bg-img1 {
         .navbar {
             .nav-menu {
@@ -359,9 +392,36 @@
     }
 }
 
+@media (max-width:806px) {
+    .navbar {
+        row-gap: 10px;
+        justify-content: center;
+    }
+}
+
 @media (min-width:684px) {
     .response {
         display: none;
+    }
+
+    .bg-img1 {
+        .navbar {
+            display: flex;
+            justify-content: left;
+            .nav-menu {
+                position: absolute;
+                right: 0px !important;
+                .nav-inner {
+                    display: flex !important;
+                    padding: 2px 7px 0 0 !important;                    
+                    .drop {
+                        .inner-nav-menu {
+                            position: absolute !important;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -385,14 +445,15 @@
 
     .bg-img1 {
         .navbar {
+
+
             .nav-menu {
-                ul::-webkit-scrollbar
-                {
+                ul::-webkit-scrollbar {
                     width: 0px;
                 }
+
                 ul {
                     transition: .5s;
-                    display: block;
                     top: 0;
                     right: -200px;
                     min-height: 100vh;
@@ -403,8 +464,21 @@
                     border: .1px rgba(0, 0, 0, 0.123) solid;
                     position: fixed;
                     z-index: 1 !important;
-                    overflow-y: scroll;
+                    overflow-y: scroll !important;
                     bottom: 0;
+
+                    .nav-inner {
+                        flex-direction: column !important;
+                        padding-top: 40px;
+
+                        .drop {
+                            .inner-nav-menu {
+                                .list-item {
+                                background: #64acac;
+                                }
+                            }
+                        }
+                    }
 
                     li {
                         a {
@@ -543,5 +617,27 @@
 
     .bg-img1 .bg-center .heading {
         font-size: 25px;
+    }
+}
+
+@media (min-width:50px) {
+    .bg-img1 {
+
+        .navbar {
+            .nav-menu {
+                .nav-inner {
+                    padding: 45px 7px 0 0 !important;
+                    display: block;
+                    .drop {
+                        .inner-nav-menu {
+                            position: relative;
+                            padding: 0px;
+                            min-width: 100%;
+                            min-height: auto;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

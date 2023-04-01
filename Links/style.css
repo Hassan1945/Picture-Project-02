@@ -29,14 +29,31 @@
       width: 190px; }
     .bg-img1 .navbar .nav-menu {
       float: right; }
-      .bg-img1 .navbar .nav-menu ul {
+      .bg-img1 .navbar .nav-menu .nav-inner {
         display: flex;
         flex-direction: row;
         padding: 2px 7px 0 0;
         justify-content: space-between; }
-        .bg-img1 .navbar .nav-menu ul li {
-          list-style: none; }
-          .bg-img1 .navbar .nav-menu ul li a {
+        .bg-img1 .navbar .nav-menu .nav-inner .drop {
+          list-style: none;
+          color: #fff; }
+          .bg-img1 .navbar .nav-menu .nav-inner .drop .inner-nav-menu {
+            position: absolute;
+            background: transparent; }
+            .bg-img1 .navbar .nav-menu .nav-inner .drop .inner-nav-menu .list-item {
+              background: transparent;
+              padding: 0px 0px; }
+              .bg-img1 .navbar .nav-menu .nav-inner .drop .inner-nav-menu .list-item .l-txt {
+                text-decoration: none;
+                padding: 10px 21px 10px 21px;
+                letter-spacing: .5px;
+                font-size: 13.5px;
+                color: #fff;
+                font-weight: 500;
+                background-color: transparent; }
+              .bg-img1 .navbar .nav-menu .nav-inner .drop .inner-nav-menu .list-item .l-txt:hover {
+                color: #000 !important; }
+          .bg-img1 .navbar .nav-menu .nav-inner .drop .i-txt {
             display: flex;
             align-items: center;
             text-decoration: none;
@@ -45,7 +62,7 @@
             font-size: 13.5px;
             color: #fff;
             font-weight: 500; }
-            .bg-img1 .navbar .nav-menu ul li a i {
+            .bg-img1 .navbar .nav-menu .nav-inner .drop .i-txt i {
               font-size: 7px;
               padding: 0px 7.5px; }
   .bg-img1 .bg-center {
@@ -176,17 +193,25 @@
   padding: 10px 0 50px 0; }
   .outer-9 .inner .s-icons {
     margin-bottom: 20px; }
+    .outer-9 .inner .s-icons .social-icons {
+      width: 35px;
+      height: 35px;
+      display: inline-flex;
+      margin: 0 5px;
+      text-decoration: none; }
     .outer-9 .inner .s-icons .fa-brands {
+      font-size: 15px;
+      border-radius: 50%;
+      padding: 10px 0px 0px 0px;
+      width: 35px;
+      height: 35px;
       color: #666666;
-      background-color: #F2F2F2;
-      padding: 10px 10px;
-      margin: 0px 5px;
-      border-radius: 50%; }
+      background-color: #F2F2F2; }
   .outer-9 .inner .copyright {
     color: #B9B9B9;
     font-size: 12px; }
 
-@media (max-width: 781px) {
+@media (max-width: 856px) {
   .bg-img1 .navbar .nav-menu ul li a {
     font-size: 10px;
     padding-left: 15px; }
@@ -213,9 +238,25 @@
     .outer-7 .in-outer .inner span {
       display: block;
       margin: 40px 0px; } }
+@media (max-width: 806px) {
+  .navbar {
+    row-gap: 10px;
+    justify-content: center; } }
 @media (min-width: 684px) {
   .response {
-    display: none; } }
+    display: none; }
+
+  .bg-img1 .navbar {
+    display: flex;
+    justify-content: left; }
+    .bg-img1 .navbar .nav-menu {
+      position: absolute;
+      right: 0px !important; }
+      .bg-img1 .navbar .nav-menu .nav-inner {
+        display: flex !important;
+        padding: 2px 7px 0 0 !important; }
+        .bg-img1 .navbar .nav-menu .nav-inner .drop .inner-nav-menu {
+          position: absolute !important; } }
 @media (max-width: 683px) {
   .response {
     color: #fff;
@@ -234,7 +275,6 @@
     width: 0px; }
   .bg-img1 .navbar .nav-menu ul {
     transition: .5s;
-    display: block;
     top: 0;
     right: -200px;
     min-height: 100vh;
@@ -245,8 +285,13 @@
     border: 0.1px rgba(0, 0, 0, 0.123) solid;
     position: fixed;
     z-index: 1 !important;
-    overflow-y: scroll;
+    overflow-y: scroll !important;
     bottom: 0; }
+    .bg-img1 .navbar .nav-menu ul .nav-inner {
+      flex-direction: column !important;
+      padding-top: 40px; }
+      .bg-img1 .navbar .nav-menu ul .nav-inner .drop .inner-nav-menu .list-item {
+        background: #64acac; }
     .bg-img1 .navbar .nav-menu ul li a {
       padding: 8px 15px;
       border-top: 0.1px rgba(0, 0, 0, 0.123) solid;
@@ -326,5 +371,14 @@
 
   .bg-img1 .bg-center .heading {
     font-size: 25px; } }
+@media (min-width: 50px) {
+  .bg-img1 .navbar .nav-menu .nav-inner {
+    padding: 45px 7px 0 0 !important;
+    display: block; }
+    .bg-img1 .navbar .nav-menu .nav-inner .drop .inner-nav-menu {
+      position: relative;
+      padding: 0px;
+      min-width: 100%;
+      min-height: auto; } }
 
 /*# sourceMappingURL=style.css.map */

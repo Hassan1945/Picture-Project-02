@@ -44,16 +44,40 @@ body {
         .nav-menu {
             float: right;
 
-            ul {
+            .nav-inner {
                 display: flex;
                 flex-direction: row;
                 padding: 2px 7px 0 0;
                 justify-content: space-between;
 
-                li {
+                .drop {
                     list-style: none;
+                    color: #fff;
+                    
+                    .inner-nav-menu {
+                        position: absolute;
+                        background: transparent;
 
-                    a {
+                        .list-item {
+                            background: transparent;
+                            padding: 0px 0px;
+                            .l-txt {
+                                text-decoration: none;
+                                padding: 10px 21px 10px 21px;
+                                letter-spacing: .5px;
+                                font-size: 13.5px;
+                                color: #fff;
+                                font-weight: 500;
+                                background-color: transparent;
+                            }
+                            .l-txt:hover 
+                            {
+                                color: #000 !important;
+                            }
+                        }
+                    }
+
+                    .i-txt {
                         display: flex;
                         align-items: center;
                         text-decoration: none;
@@ -204,6 +228,7 @@ body {
 
     p {
         font-size: 17px;
+        margin: 0px;
     }
 
     .outer-min {
@@ -424,7 +449,7 @@ body {
     }
 
     .pics {
-        padding: 0px 25px;
+        padding: 0px 65px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -436,7 +461,7 @@ body {
             background: #fff;
 
             img {
-                width: 380px;
+                width: 420px;
             }
 
             h1 {
@@ -550,16 +575,37 @@ body {
     font-style: normal;
     padding: 10px 0 50px 0;
 
+    brands {
+        color: #666666;
+        background-color: #F2F2F2;
+        width: 35px;
+        text-align: center;
+        padding: 11px 0 0 0;
+        height: 35px;
+        margin: 0px 5px;
+        border-radius: 50%;
+    }
     .inner {
         .s-icons {
             margin-bottom: 20px;
 
+            .social-icons 
+            {
+                width: 35px;
+                height: 35px;
+                display: inline-flex;
+                margin: 0 5px;
+                text-decoration: none;
+            }
+
             .fa-brands {
+                font-size: 15px;
+                border-radius: 50%;
+                padding: 10px 0px 0px 0px;
+                width: 35px;
+                height: 35px;
                 color: #666666;
                 background-color: #F2F2F2;
-                padding: 10px 10px;
-                margin: 0px 5px;
-                border-radius: 50%;
             }
         }
 
@@ -867,35 +913,35 @@ body {
 @media (max-width:781px) {
 
 
-.outer-2
-{
-    .icons
+    .navbar
     {
-        #icon
-        {
-            img 
-            {
-                width: 50px;
-            }
-            b,p
-            {
-                font-size: 8px;
-            }
-        }
+        row-gap: 10px;
+        justify-content: center;
     }
-}
+    .outer-2 {
+        .icons {
+            #icon {
+                img {
+                    width: 50px;
+                }
 
-.outer-4
-{
-    padding: 50px 60px;
-    div 
-    {
-        h1 
-        {
-            font-size: 30px;
+                b,
+                p {
+                    font-size: 8px;
+                }
+            }
         }
     }
-}
+
+    .outer-4 {
+        padding: 50px 60px;
+
+        div {
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
 
     .outer-7 {
         .in-outer {
@@ -909,6 +955,25 @@ body {
 @media (min-width:684px) {
     .response {
         display: none;
+    }
+    .bg-img1 {
+        .navbar {
+            display: flex;
+            justify-content: left;
+            .nav-menu {
+                position: absolute;
+                right: 0px !important;
+                .nav-inner {
+                    display: flex !important;
+                    padding: 2px 7px 0 0 !important;                    
+                    .drop {
+                        .inner-nav-menu {
+                            position: absolute !important;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -937,11 +1002,11 @@ body {
 
     .bg-img1 {
         .navbar {
+            justify-content: center;
             .nav-menu {
-                
+
                 ul {
                     transition: .5s;
-                    display: block;
                     top: 0;
                     right: -200px;
                     min-height: 100vh;
@@ -988,19 +1053,19 @@ body {
             }
         }
     }
-    .outer-5
-    {
+
+    .outer-5 {
         background-size: cover;
     }
 
 }
 
-@media(max-width:547px)
-{
+@media(max-width:547px) {
     .bg-img1 {
         .bg-down {
             span {
                 padding: 0px 20px 7px 20px;
+
                 strong {
                     font-size: 14px;
                 }
@@ -1061,7 +1126,7 @@ body {
     }
 
     .outer-2 {
-        
+
         .outer-min {
             b {
                 font-size: 14px;
@@ -1078,12 +1143,13 @@ body {
         }
 
         .icons {
-            display:block;
+            display: block;
             width: 60%;
+
             #icon {
                 padding: 15px;
                 margin: 20px 5px;
-                width:100%;
+                width: 100%;
 
                 span {
                     padding: 3px 6px;
@@ -1112,28 +1178,27 @@ body {
     h3 {
         font-size: 17px;
     }
-    .outer-6
-    {
-        .pics 
-        {
+
+    .outer-6 {
+        .pics {
             padding: 0px;
-            .pic 
-            {
+
+            .pic {
                 padding: 10px;
-                img 
-                {
+
+                img {
                     padding: 10px 0px;
                 }
-                h1 
-                {
+
+                h1 {
                     font-size: 14px;
                 }
-                p 
-                {
+
+                p {
                     font-size: 12px;
                 }
-                div 
-                {
+
+                div {
                     font-size: 10px;
                 }
             }
@@ -1142,46 +1207,42 @@ body {
 }
 
 @media (max-width:456px) {
-    .bg-img1 
-    {
-        .bg-down
-        {
-            span 
-            {
+    .bg-img1 {
+        .bg-down {
+            span {
                 padding: 0px 7px 7px 7px;
-                strong 
-                {
+
+                strong {
                     font-size: 10px;
                     margin-right: 5px;
                 }
-                p 
-                {
+
+                p {
                     font-size: 8px;
                 }
             }
         }
-        .bg-center
-        {
-            p.heading 
-            {
+
+        .bg-center {
+            p.heading {
                 font-size: 16px;
                 margin-top: 30px;
             }
-            p.under-heading
-            {
+
+            p.under-heading {
                 margin-bottom: 10px;
                 font-size: 5px;
             }
-            .input 
-            {
+
+            .input {
                 padding: 4px;
                 width: 166px;
-                input 
-                {
-                font-size: 5px;
+
+                input {
+                    font-size: 5px;
                 }
-                .glyphicon
-                {
+
+                .glyphicon {
                     font-size: 7px;
                     padding-right: 2px;
                     padding-bottom: 2px;
@@ -1189,24 +1250,45 @@ body {
             }
         }
     }
-    .outer-4 
-    {
+
+    .outer-4 {
         padding: 0 0px;
     }
-    .outer-6
-    {
-        .pics
-        {
-        display: block;
-        width: 100%;
-        .pic 
-        {
-            width: 80%;
+
+    .outer-6 {
+        .pics {
             display: block;
-            margin: auto;
+            width: 100%;
+
+            .pic {
+                width: 80%;
+                display: block;
+                margin: auto;
+            }
         }
-        }
-        
+
     }
 }
 
+@media (min-width:50px) {
+
+    .bg-img1 {
+
+        .navbar {
+            .nav-menu {
+                .nav-inner {
+                    padding: 45px 7px 0 0;
+                    display: block;
+                    .drop {
+                        .inner-nav-menu {
+                            position: relative;
+                            padding: 0px;
+                            min-width: 100%;
+                            min-height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
