@@ -373,7 +373,7 @@
     font-size: 25px; } }
 @media (min-width: 50px) {
   .bg-img1 .navbar .nav-menu .nav-inner {
-    padding: 45px 7px 0 0 !important;
+    padding: 45px 7px 0 0;
     display: block; }
     .bg-img1 .navbar .nav-menu .nav-inner .drop .inner-nav-menu {
       position: relative;
